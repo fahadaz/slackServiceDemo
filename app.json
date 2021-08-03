@@ -1,0 +1,41 @@
+{
+    "name": "🌟 Service Slack Integration",
+    "description": "Slack integration with Service Cloud using Heroku",
+    "repository": "https://github.com/fahadaz/slackServiceDemo",
+    "env": {
+      "SLACK_SIGNING_SECRET": {
+        "description": "Slack Signing Secret",
+        "required": true
+      },
+      "SLACK_ACCESS_TOKEN": {
+        "description": "Slack Access token",
+        "required": false
+      },
+      "SF_LOGIN_URL": {
+        "description": "Salesforce Login Url",
+        "required": true,
+        "value":"https://login.salesforce.com"
+      },
+      "CLIENT_ID": {
+        "description": "Salesforce Connected App - Consumer Id",
+        "required": true
+      },
+      "CLIENT_SECRET": {
+        "description": "Salesforce Connected App - Consumer Secret",
+        "required": true
+      },
+      "USER_NAME": {
+        "description": "Salesforce User name",
+        "required": true
+      },
+      "PASS": {
+        "description": "Salesforce Password",
+        "required": true
+      },
+      "CASE_OWNER_ID": {
+        "description": "Salesforce Case Owner User Id",
+        "required": true
+      },      
+    },
+    "image": "heroku/nodejs"
+  }
