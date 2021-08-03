@@ -1,4 +1,4 @@
-* Create .env file
+Create .env file
 SLACK_SIGNING_SECRET=
 SLACK_ACCESS_TOKEN=
 PORT=
