@@ -204,6 +204,7 @@ app.view("comment_view", async ({ ack, body, view, client, say }) => {
 // respond to call from salesforce
 receiver.router.get("/new-case", async (req, res) => {
   // You're working with an express req and res now.
+  try{
   const caseId = req.query["caseid"];
 
   if (caseId === undefined || caseId === "") {
@@ -244,6 +245,10 @@ receiver.router.get("/new-case", async (req, res) => {
   })();
 
   res.send("yes");
+}catch(err){
+  console.log(err);
+  res.send("error");
+}
 });
 
 // Staring app
