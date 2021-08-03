@@ -1,10 +1,1 @@
-Create .env file
-SLACK_SIGNING_SECRET=
-SLACK_ACCESS_TOKEN=
-PORT=
-SF_LOGIN_URL=
-CLIENT_ID=
-CLIENT_SECRET=
-USER_NAME=
-PASS=
-CASE_OWNER_ID=
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
