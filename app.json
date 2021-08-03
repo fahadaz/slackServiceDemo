@@ -35,7 +35,7 @@
       "CASE_OWNER_ID": {
         "description": "Salesforce Case Owner User Id",
         "required": true
-      },      
+      }      
     },
     "image": "heroku/nodejs"
   }
