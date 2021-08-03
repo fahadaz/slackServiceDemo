@@ -1,0 +1,42 @@
+{
+	"title": {
+		"type": "plain_text",
+		"text": "Add case comments",
+		"emoji": true
+	},
+	"submit": {
+		"type": "plain_text",
+		"text": "Submit",
+		"emoji": true
+	},
+	"type": "modal",
+	"callback_id": "comment_view",
+	"close": {
+		"type": "plain_text",
+		"text": "Cancel",
+		"emoji": true
+	},
+	"blocks": [
+		{
+			"type": "section",
+			"block_id": "comment_block",
+			"text": {
+				"type": "mrkdwn",
+				"text": "*Case No.:* <%=data.CaseNumber%>"
+			}
+		},
+		{
+			"type": "input",
+			"block_id": "comment_input",
+			"element": {
+				"type": "plain_text_input",
+				"action_id": "case_comment_action"
+			},
+			"label": {
+				"type": "plain_text",
+				"text": "Case Comment",
+				"emoji": true
+			}
+		}
+	]
+}

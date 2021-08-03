@@ -1,0 +1,48 @@
+ [
+		{
+			"type": "divider"
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "A new case was created: *<%=v.CaseNumber%>*"
+			}
+		},
+		{
+			"type": "section",
+			"fields": [
+				{
+					"type": "mrkdwn",
+					"text": "*Subject:*\n<%=v.Subject%>"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*Date Created:*\n<%=v.CreatedDate%>"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*Description:*\n<%=v.Description%>"
+				}
+			]
+		},
+		{
+			"type": "actions",
+			"elements": [
+				{
+					"type": "button",
+					"text": {
+						"type": "plain_text",
+						"emoji": true,
+						"text": "Take ownership"
+					},
+					"style": "primary",
+					"value": "<%=v.Id%>",
+					"action_id": "take_ownership"
+				}
+			]
+		},
+		{
+			"type": "divider"
+		}
+	]

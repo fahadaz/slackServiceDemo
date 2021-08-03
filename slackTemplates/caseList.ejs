@@ -1,0 +1,74 @@
+{
+	"blocks":[
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "*Top 5 Cases*"
+			}
+		},
+		{
+			"type": "divider"
+		},
+		<%for(let i=0; i < data.length; i++ ){%>
+        {
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "*Case No.:* <%=data[i].CaseNumber%> \n*Subject:* <%=data[i].Subject%> \n*Status:* <%=data[i].Status%> \n*Date Created:* <%=data[i].CreatedDate%>"
+			},            
+			"accessory": {
+				"action_id": "case_actions",
+				"type": "static_select",
+				"placeholder": {
+					"type": "plain_text",					
+					"text": "select an action..."
+				},
+				"options": [
+					
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "add comment"
+						},
+						"value": "<%=data[i].Id%>|<%=data[i].CaseNumber%>"
+					},
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "close case"
+						},
+						"value": "<%=data[i].Id%>|<%=data[i].CaseNumber%>"
+					},
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "change status"
+						},
+						"value": "<%=data[i].Id%>|<%=data[i].CaseNumber%>"
+					}
+				]
+			}
+		},
+		{
+			"type": "divider"
+		},
+        <%}%>
+		{
+			"type": "actions",
+			"elements": [
+				{
+					"type": "button",
+					"text": {
+						"type": "plain_text",						
+						"text": "Add a new Case"
+					},
+					"value": "click_me_123"
+				}
+			]
+		},
+		{
+			"type": "divider"
+		}
+	]
+}
